@@ -9,9 +9,11 @@ import Profile from './pages/Profile';
 import About from './pages/About';
 import CreateEvent from './pages/CreateEvent';
 import Login from './pages/Login';
+import './App.css';
 
 function App() {
   return (
+    <div className='body'>
     <Router>
       <Navbar />
       <div className="content">
@@ -27,6 +29,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </div>
   );
 }
 

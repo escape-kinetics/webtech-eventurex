@@ -1,6 +1,7 @@
 // src/pages/Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Login.css';
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
@@ -24,7 +25,7 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div style={styles.container}>
+    <div className='container'>
       <h2>Login</h2>
       <form onSubmit={handleLogin} style={styles.form}>
         <label>Email:</label>
@@ -44,21 +45,14 @@ function Login({ onLogin }) {
           style={styles.input}
         />
         {errorMessage && <p style={styles.error}>{errorMessage}</p>}
-        <button type="submit" style={styles.button}>Login</button>
+        <button type="submit" className="login-button">Login</button>
       </form>
     </div>
   );
 }
 
 const styles = {
-  container: {
-    maxWidth: '400px',
-    margin: '0 auto',
-    padding: '20px',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-    boxShadow: '2px 2px 10px rgba(0,0,0,0.1)',
-  },
+  
   form: {
     display: 'flex',
     flexDirection: 'column',
@@ -68,15 +62,8 @@ const styles = {
     padding: '10px',
     fontSize: '16px',
   },
-  button: {
-    padding: '10px',
-    fontSize: '16px',
-    backgroundColor: '#007BFF',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
+  
+  
   error: {
     color: 'red',
   },
