@@ -28,7 +28,7 @@ function CreateEvent({ onEventCreated }) {
   };
 
   return (
-    <div style={styles.container}>
+    <div className='container'>
       <h2>Create Event</h2>
       <form onSubmit={handleCreateEvent} style={styles.form}>
         <label>Event Name:</label>
@@ -62,14 +62,7 @@ function CreateEvent({ onEventCreated }) {
 }
 
 const styles = {
-  container: {
-    maxWidth: '400px',
-    margin: '0 auto',
-    padding: '20px',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-    boxShadow: '2px 2px 10px rgba(0,0,0,0.1)',
-  },
+  
   form: {
     display: 'flex',
     flexDirection: 'column',
